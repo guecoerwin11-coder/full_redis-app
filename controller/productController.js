@@ -1,6 +1,7 @@
 const User = require('../models/authentication')
 const Product = require('../models/product')
 const redisClient = require('../middleware/redis')
+const mongoose = require('mongoose')
 
 
 const getProducts = async (req, res) => {

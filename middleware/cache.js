@@ -8,7 +8,7 @@ const cacheMiddleware = (key, expireTime = 60) => async (req, res, next) => {
             return res.status(200).json({
                 fromcache: true,
                 message: 'Data retrieved from cache',
-                data: JSON.parse(cachedData)
+                data: cachedData
             })
         }
         res.sendResponse = res.json

@@ -1,6 +1,6 @@
 const redis = require('./redis')
 
-const rateLimiter = (routekey, limit = 1000, window = 60) => async (req, res, next) => {
+const rateLimiter = (limit = 1000, window = 60) => async (req, res, next) => {
     try{
 
         //use the ip address as the key for rate limiting
